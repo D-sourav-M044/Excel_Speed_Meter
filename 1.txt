@@ -1,0 +1,14 @@
+Private Sub Worksheet_Activate()
+ActiveSheet.Shapes.Range(Array("Group 266")).Select
+Selection.ShapeRange.Rotation = Range("C3").Value * 251
+ActiveCell.Select
+
+End Sub
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+ActiveSheet.Shapes.Range(Array("Group 266")).Select
+Selection.ShapeRange.Rotation = Range("C3").Value * 251
+ActiveCell.Select
+
+End Sub

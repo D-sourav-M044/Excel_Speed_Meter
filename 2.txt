@@ -1,0 +1,53 @@
+Private Sub Worksheet_Activate()
+Application.ScreenUpdating = False
+
+ 
+    ActiveSheet.Shapes.Range(Array("Group 44")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C2").Value * 254
+    ActiveCell.Select
+ 
+    
+  
+    ActiveSheet.Shapes.Range(Array("Group 209")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C3").Value * 254
+    ActiveCell.Select
+ 
+
+ 
+
+    ActiveSheet.Shapes.Range(Array("Group 298")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C4").Value * 254
+    ActiveCell.Select
+    
+ 
+
+End Sub
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+
+Application.ScreenUpdating = False
+
+If Target.Address = "$C$2" Then
+    ActiveSheet.Shapes.Range(Array("Group 44")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C2").Value * 254
+    ActiveCell.Select
+End If
+    
+ If Target.Address = "$C$3" Then
+    ActiveSheet.Shapes.Range(Array("Group 209")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C3").Value * 254
+    ActiveCell.Select
+End If
+
+If Target.Address = "$C$4" Then
+
+    ActiveSheet.Shapes.Range(Array("Group 298")).Select
+    Selection.ShapeRange.Rotation = ActiveSheet.Range("C4").Value * 254
+    ActiveCell.Select
+    
+End If
+
+
+End Sub
+
+
